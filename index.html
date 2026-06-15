@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/snake-game/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/snake-game/assets/index-CJhlAmPO.js"></script>
+  <link rel="modulepreload" crossorigin href="/snake-game/assets/Geometry-BC0Wzmsf.js">
+  <link rel="modulepreload" crossorigin href="/snake-game/assets/RenderTargetSystem-Rud0amiM.js">
+  <link rel="stylesheet" crossorigin href="/snake-game/assets/index-IhaA_6oy.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="game-field-wrapper">
+      <div id="pixi-canvas-container"></div>
+    </div>
+    <aside id="gui-panel">
+      <h1 class="game-title">Snake Game</h1>
+      <div class="score-card">
+        <span class="score-label">Best :</span>
+        <span id="best-score" class="score-value">0</span>
+      </div>
+      <div class="score-card">
+        <span class="score-label">Score :</span>
+        <span id="current-score" class="score-value">0</span>
+      </div>
+      <div id="modes-selection-container" class="modes-panel">
+        <div class="mode-option">
+          <input type="radio" id="mode-classic" name="gameMode" value="classic" checked />
+          <label for="mode-classic">Classic</label>
+        </div>
+        <div class="mode-option">
+          <input type="radio" id="mode-nodie" name="gameMode" value="nodie" />
+          <label for="mode-nodie">No Die</label>
+        </div>
+        <div class="mode-option">
+          <input type="radio" id="mode-walls" name="gameMode" value="walls" />
+          <label for="mode-walls">Walls</label>
+        </div>
+        <div class="mode-option">
+          <input type="radio" id="mode-portal" name="gameMode" value="portal" />
+          <label for="mode-portal">Portal</label>
+        </div>
+        <div class="mode-option">
+          <input type="radio" id="mode-speed" name="gameMode" value="speed" />
+          <label for="mode-speed">Speed</label>
+        </div>
+      </div>
+      <div class="controls-panel">
+        <div id="menu-buttons" class="button-group">
+          <button id="btn-play" class="action-btn">Play</button>
+          <button id="btn-exit" class="action-btn">Exit</button>
+        </div>
+        <div id="game-buttons" class="button-group hidden">
+          <button id="btn-menu" class="action-btn">Menu</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="exit-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2>Thanks for playing!</h2>
+      <p>You can close this tab now.</p>
+      <button id="btn-reopen" class="action-btn">Back to Game</button>
+    </div>
+  </div>
+
+  <div id="gameover-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2>Game Over</h2>
+      <p id="gameover-message">Your score: 0</p>
+      <button id="btn-gameover-menu" class="action-btn">Menu</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
