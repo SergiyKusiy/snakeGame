@@ -2,6 +2,8 @@
 
 A Snake game built with Pixi.js and vanilla JavaScript.
 
+🎮 **[Play Now](https://sergiykusiy.github.io/snakeGame/)**
+
 ## Game Modes
 
 - **Classic** — the game ends if the snake hits the wall or its own body
